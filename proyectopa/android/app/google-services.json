@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "876987689606",
+    "project_id": "app-trabajorafael",
+    "storage_bucket": "app-trabajorafael.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876987689606:android:958e0f85391f60539b3f07",
+        "android_client_info": {
+          "package_name": "com.example.proyectopa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876987689606-uhaktlt4gultjcvvv62v5at6o20p05mp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADxX4xVG4b37IeVuPF_Fs2GrQfNCoADqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876987689606-uhaktlt4gultjcvvv62v5at6o20p05mp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,55 +1,33 @@
-import 'dart:core';
+import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:proyectopa/db/db.dart';
 import 'package:proyectopa/models/producto_model.dart';
+import 'package:proyectopa/services/products_service.dart';
 
-class Listado extends StatelessWidget {
+class ListadoPage extends StatefulWidget {
+  const ListadoPage({Key? key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text("Productos"),
-        ),
-        body: Lista());
-  }
+  _ListadoPageState createState() => _ListadoPageState();
 }
 
-class Lista extends StatefulWidget {
-  @override
-  _MiLista createState() => _MiLista();
-}
-
-class _MiLista extends State<Lista> {
-  List<Producto> productos = [];
-
+class _ListadoPageState extends State<ListadoPage> {
+  StreamSubscription? _loadProducto;
+  Producto? producto;
+  final productService = ProductService();
   @override
   void initState() {
-    cargaAnimales();
-    super.initState();
-  }
-
-  cargaAnimales() async {
-    List<Producto> auxProducto = await DB.getProductos();
-
-    setState(() {
-      productos = auxProducto;
-      
+    // TODO: implement initState
+    _loadProducto = productService.load$('id').listen((producto) {
+      setState(() {
+        this.producto = producto;
+      });
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    print(productos);
-    return ListView.builder(
-        itemCount: productos.length,
-        itemBuilder: (context, i) => ListTile(
-            title: Text(productos[i].name),
-            trailing: MaterialButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "/editar",
-                      arguments: productos[i]);
-                },
-                child: Icon(Icons.edit))));
+    // TODO: implement build
+    throw UnimplementedError();
   }
 }
