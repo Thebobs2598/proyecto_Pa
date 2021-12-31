@@ -1,2 +1,2 @@
 # proyecto_Pa
- Proyecto Usando SQLite en flutter
+ Proyecto Usando consultas a Firebase y Search Delegate en flutter
